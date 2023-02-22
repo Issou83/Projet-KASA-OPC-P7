@@ -3,9 +3,9 @@ import Banner from '../components/Banner';
 
 const Main = () => {
     return (
-        <div>
+        <main className='main'>
             <Banner />
-        </div>
+        </main>
     );
 };
 

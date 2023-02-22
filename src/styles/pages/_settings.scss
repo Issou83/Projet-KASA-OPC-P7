@@ -1,17 +1,26 @@
+@mixin centerAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin marginContainer {
+  margin-left: 6.94%;
+  margin-right: 6.94%;
+}
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-  
-  body {
-    
-   margin-left: 6.94%;
-   margin-right: 6.94%;
-  }
+   html {
+    width: 100%;
+    height: 100%;
 
-  @mixin centerAll {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+   }
+
+
+
+

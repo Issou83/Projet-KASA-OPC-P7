@@ -1,0 +1,26 @@
+@import "../pages/settings";
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    align-items: flex-end;
+    height: 209px;
+    @include centerAll;
+
+    display: flex;
+    justify-content:stretch ;
+    flex-direction: column;
+    background: black;
+    font-size: 12px;
+    p {
+        color: white;
+    }
+
+    img {
+        margin-top: 66px;
+        height: 31px;
+       
+       filter: opacity(0.2) drop-shadow(0.1);
+    }
+}
