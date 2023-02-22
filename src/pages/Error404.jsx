@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 const Error404 = () => {
     return (
         <div>
-            <p>404</p>
+            <Header />
+            <h1>404</h1>
         </div>
     );
 };

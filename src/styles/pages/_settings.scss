@@ -5,6 +5,13 @@
   }
   
   body {
+    
    margin-left: 6.94%;
    margin-right: 6.94%;
+  }
+
+  @mixin centerAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
