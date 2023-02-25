@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../components/Banner'
-import { useEffect, useState } from "react";
+import { useState, useEffect } from 'react';
 import Cards from '../components/Cards';
 
 
@@ -14,18 +14,17 @@ const Home = () => {
             .then((res) => {return res.json()})
             .then((data) => setData(data))
             .catch((error) => console(error))
-
-    },[])
+    },[]);
 
     return (
         <main>
             <Banner />
             <div className='containerCards'>
-            {data
-            .map((housing) => (
-                <Cards housing={housing} key={housing.id}/>
-        ))}
-        </div>
+                {data
+                .map((housing) => (
+                    <Cards housing={housing} key={housing.id}/>
+                ))}
+            </div>
         </main>
     );
 };

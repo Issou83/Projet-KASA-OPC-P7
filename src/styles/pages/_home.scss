@@ -22,15 +22,16 @@ main {
     position: relative;
     height: 340px;
     width: 340px;
-    
+    background: linear-gradient rgba(0,0,0,0.599921218487395) 100%;
     border-radius: 20px;
     
-    &__image {
+    img {
         margin: 0;      
         height: 100%;
         width: 100%;
         object-fit: cover;
         border-radius: 20px;
+        
     }
 
     p {

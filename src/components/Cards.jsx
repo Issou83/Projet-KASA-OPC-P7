@@ -5,7 +5,7 @@ const Cards = ({housing}) => {
     return (
         <Link >
         <figure className='cards' >
-            <img src={housing.cover} alt={housing.location} className='cards__image'></img>
+            <img src={housing.cover} alt={housing.location} ></img>
             <p>{housing.title}</p>
         </figure>
          </Link>
