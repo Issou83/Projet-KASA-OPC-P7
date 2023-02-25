@@ -1,0 +1,26 @@
+main {
+    @include marginContainer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+ 
+}
+
+
+a.containerCards {
+        height: 340px;
+        width: 340px;
+
+
+    .cards {
+        height: 340px;
+        width: 340px;
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    }
+ 
+}
