@@ -13,16 +13,14 @@ const Banner = () => {
 
     useEffect(() => {
         if (location === '/') {setLocationHome(true)}
-    },[]);
+    });
 
     console.log(location);
 
     return (
         <div className={locationHome ? 'banner banner__home' :'banner banner__about'}>
-            {/* { locationHome ? 
-            <img src={imageHome} className="banner__img" alt="banniére"/> :
-            <img src={imageAbout} className="banner__img" alt="banniére"/> } */}
-            <h1 className='banner__title'>Chez vous, partout et ailleurs</h1>
+            {locationHome ? <h1 className='banner__title'>Chez vous, partout et ailleurs</h1> : ""}
+            
         </div>
         );
     }

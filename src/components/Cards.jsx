@@ -6,7 +6,7 @@ const Cards = ({housing}) => {
         <Link >
         <figure className='cards' >
             <img src={housing.cover} alt={housing.location} ></img>
-            <p>{housing.title}</p>
+            <h2>{housing.title}</h2>
         </figure>
          </Link>
     );
