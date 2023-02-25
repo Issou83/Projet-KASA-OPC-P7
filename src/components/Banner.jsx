@@ -8,10 +8,12 @@ const Banner = () => {
 
     const location = useLocation().pathname;
     console.log({location});
-
+    const home = (location) => {if ({location}!=={location:"/about"}) return {location}}
+    console.log(home);
+    // const [location, setLocation] = location("/")
     return (
         <div className='banner'>
-            <img src={imageHome}  className="banner__img" alt="banniére"/>
+         <img src={imageHome} className="banner__img" alt="banniére"/>
             <h1 className='banner__title'>Chez vous, partout et ailleurs</h1>
         </div>
         );

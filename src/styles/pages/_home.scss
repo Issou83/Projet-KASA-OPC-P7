@@ -1,31 +1,47 @@
 main {
     @include marginContainer;
+}
+
+.containerCards {
+    padding-top: 31px;
+    padding-left: 25px;
+    padding-right: 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
- 
+    background:#F6F6F6;
+    border-radius: 25px;
+
+    a {
+        margin: 25px;
+    }
 }
 
 
-a.containerCards {
-        height: 340px;
-        width: 340px;
-        
-
-
-    .cards {
-        margin: 25px;
-        border-radius: 20px;
-        height: 340px;
-        width: 340px;
-
+.cards {
+    position: relative;
+    height: 340px;
+    width: 340px;
+    
+    border-radius: 20px;
+    
     &__image {
-                margin: 25px;
+        margin: 0;      
         height: 100%;
         width: 100%;
         object-fit: cover;
         border-radius: 20px;
     }
+
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        position: absolute;
+        bottom: 0px;
+        color: white;
+        margin: 20px;
     }
+
+    
  
 }

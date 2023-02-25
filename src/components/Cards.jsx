@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Cards = ({cover, title, location}) => {
+const Cards = ({housing}) => {
     return (
+        <Link >
         <figure className='cards' >
-            <img src={cover} alt={location} className='cards__image'></img>
-            <p>{title}</p>
+            <img src={housing.cover} alt={housing.location} className='cards__image'></img>
+            <p>{housing.title}</p>
         </figure>
+         </Link>
     );
 };
 
