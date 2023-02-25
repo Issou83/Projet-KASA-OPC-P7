@@ -10,16 +10,21 @@ main {
 a.containerCards {
         height: 340px;
         width: 340px;
+        
 
 
     .cards {
+        margin: 25px;
+        border-radius: 20px;
         height: 340px;
         width: 340px;
 
     &__image {
+                margin: 25px;
         height: 100%;
         width: 100%;
         object-fit: cover;
+        border-radius: 20px;
     }
     }
  

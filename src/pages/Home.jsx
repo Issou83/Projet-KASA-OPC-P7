@@ -23,9 +23,11 @@ console.log(data);
             <Banner />
             {data
             .map((housing, id) => (
+                <div>
             <Link className='containerCards' key={id}>
                 <Cards location={housing.location} cover={housing.cover} title={housing.title} />
             </Link>
+            </div>
         ))}
         
         </main>

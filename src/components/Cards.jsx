@@ -4,7 +4,7 @@ const Cards = ({cover, title, location}) => {
     return (
         <figure className='cards' >
             <img src={cover} alt={location} className='cards__image'></img>
-            <figcaption>{title}</figcaption>
+            <p>{title}</p>
         </figure>
     );
 };
