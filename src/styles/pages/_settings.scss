@@ -1,15 +1,5 @@
-@mixin centerAll {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-@mixin marginContainer {
-  margin-left: 6.94%;
-  margin-right: 6.94%;
-}
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Montserrat:wght@100;400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 
 * {
   padding: 0;
@@ -20,20 +10,19 @@
 }
 
 html {
-width: 100%;
-height: 100%;
+@include fullSize;
+
 }
 
 body {
+  @include fullSize;
+  font-family: "Montserrat";
   padding-top: 40px;
   position: relative;
-  font-family: "Montserrat";
-  width: 100%;
-  height: 100%;
 }
 
 main {
   min-height:100%;
   position:relative;
-  padding-bottom:100px;
+  padding-bottom:43px;
 }

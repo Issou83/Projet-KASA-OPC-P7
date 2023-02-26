@@ -1,12 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
 
 const Error404 = () => {
     return (
-        <div>
-            <Header />
+        <main>
             <h1>404</h1>
-        </div>
+            <p>Oups! La page que vous demandez n'existe pas.</p>
+        </main>
     );
 };
 

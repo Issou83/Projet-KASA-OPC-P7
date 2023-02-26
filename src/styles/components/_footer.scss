@@ -1,19 +1,19 @@
-@import "../pages/settings";
-
 footer {
+
+
     height: 100px;
     width: 100%;
     align-items: flex-end;
-    height: 209px;
+    height: $heightFooter;
     @include centerAll;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    background: black;
+    background: $colorBl;
     font-size: 12px;
 
     p {
-        color: white;
+        color: $colorWh;
         margin-top: 28px;
         font-size: 22px;
     }

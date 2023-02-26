@@ -1,12 +1,9 @@
-import React from 'react';
 import Banner from '../components/Banner'
 import { useState, useEffect } from 'react';
 import Cards from '../components/Cards';
 
-
-
-
 const Home = () => {
+    
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -15,6 +12,20 @@ const Home = () => {
             .then((data) => setData(data))
             .catch((error) => console(error))
     },[]);
+    console.log({data});
+// useEffect(() => {
+//     async function getHousings() {
+//         try {
+//             const response = await fetch("/logements.json")
+//             const {data} =  await response.json()
+//             setData(data)
+//         }
+//         catch(error) {
+//             console.log(error)
+//         }
+//     }
+//     getHousings()
+// },[])
 
     return (
         <main>

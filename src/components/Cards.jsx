@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Cards = ({housing}) => {
     return (
-        <Link >
+        <Link to="/housing">
         <figure className='cards' >
             <img src={housing.cover} alt={housing.location} ></img>
             <h2>{housing.title}</h2>
