@@ -12,20 +12,6 @@ const Home = () => {
             .then((data) => setData(data))
             .catch((error) => console(error))
     },[]);
-    console.log({data});
-// useEffect(() => {
-//     async function getHousings() {
-//         try {
-//             const response = await fetch("/logements.json")
-//             const {data} =  await response.json()
-//             setData(data)
-//         }
-//         catch(error) {
-//             console.log(error)
-//         }
-//     }
-//     getHousings()
-// },[])
 
     return (
         <main>
