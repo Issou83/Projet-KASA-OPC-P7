@@ -6,9 +6,16 @@ import next from '../../assets/images/VectorForward.png';
 function Carousel({ images }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+
+
   useEffect(() => {
     const handleButtonClick = (event) => {
       const buttonId = event.target.id;
+      console.log(event);
+      let showNext=(true);
+      let showPrevious=(true)
+
+
       if (buttonId === 'previous-button') {
         const newIndex = (currentImageIndex + images.length - 1) % images.length;
         setCurrentImageIndex(newIndex);
@@ -16,6 +23,12 @@ function Carousel({ images }) {
         const newIndex = (currentImageIndex + 1) % images.length;
         setCurrentImageIndex(newIndex);
       }
+
+      if (currentImageIndex +1 === images.length) { showNext = false }
+      if (currentImageIndex === 0) { showPrevious = false }
+      console.log(showNext);
+      console.log(showPrevious);
+
     };
 
     document.addEventListener('click', handleButtonClick);
@@ -23,16 +36,24 @@ function Carousel({ images }) {
       document.removeEventListener('click', handleButtonClick);
     };
   }, [currentImageIndex, images]);
-
+  console.log(currentImageIndex);
+  console.log(images.length);
   return (
     <div className='carousel'>
-      <button className='carousel__previous' id="previous-button">
-        <img src={previous} alt='précédente'/>
-      </button>
-      <img className='carousel__next' src={images[currentImageIndex]} alt="imagecarousel" />
-      <button className='carousel__next' id="next-button">
-      <img src={next} alt='suivante'/>
-      </button>
+
+      <botton className='carousel__previous' >
+        <img src={previous} alt='précédente'id="previous-button"/>
+      </botton>
+
+      <img className='carousel__img' src={images[currentImageIndex]} alt="imagecarousel" />
+      <p className='position'>{currentImageIndex + 1}/{images.length}</p>
+
+      <botton className='carousel__next' >
+        
+        
+          <img src={next} alt='suivante' id="next-button"/>
+        
+      </botton>
     </div>
   );
 }
