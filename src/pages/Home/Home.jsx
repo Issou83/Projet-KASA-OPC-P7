@@ -1,6 +1,7 @@
-import Banner from '../components/Banner'
+import Banner from '../../components/Banner/Banner';
 import { useState, useEffect } from 'react';
-import Cards from '../components/Cards';
+import Cards from '../../components//Cards/Cards';
+import './index.scss';
 
 const Home = () => {
     
