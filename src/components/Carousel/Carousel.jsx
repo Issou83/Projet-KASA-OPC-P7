@@ -6,14 +6,14 @@ import next from '../../assets/images/VectorForward.png';
 function Carousel({ images }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-
+  let showNext=(true);
+  let showPrevious=(true)
 
   useEffect(() => {
     const handleButtonClick = (event) => {
       const buttonId = event.target.id;
       console.log(event);
-      let showNext=(true);
-      let showPrevious=(true)
+
 
 
       if (buttonId === 'previous-button') {
@@ -25,11 +25,14 @@ function Carousel({ images }) {
       }
 
       if (currentImageIndex +1 === images.length) { showNext = false }
-      if (currentImageIndex === 0) { showPrevious = false }
+      if (currentImageIndex === 1) { showPrevious = false }
       console.log(showNext);
       console.log(showPrevious);
 
     };
+
+    
+
 
     document.addEventListener('click', handleButtonClick);
     return () => {
