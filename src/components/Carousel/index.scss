@@ -15,15 +15,14 @@
     &__previous {
         position: absolute;
         left: 24px;
-        top: 170px;
-        z-index: 3;
+        top: 170px;  
     }
 
     &__next {
         position: absolute;
         right: 24px;
         top:  170px;
-        z-index: 3;
+      
         
     }
 
@@ -33,5 +32,15 @@
         color: white;
         bottom: 18px;
         left: 50%;
+    }
+}
+
+.arrow {
+    &__previous {
+        width: 0;
+    }
+
+    &__next {
+        width: 0;
     }
 }
