@@ -1,6 +1,6 @@
 @import "../../styles/utils/variables";
 
-main {
+.housing {
     color: $colorTheme;
     font-size: 18px;
     .informations {
@@ -41,17 +41,21 @@ main {
         text-align: end;
     }
 
-img {
-    border-radius: 50%;
-    width: 64px;
-    height: 64px;
-}
+    img {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+    }
 }
 
-.section__collaps {
-    height: 302px;
+.sectionCollaps__housing {
+
+        height: 292px;
+    
+
     display: flex;
     flex-direction:row;
     justify-content: space-between;
 
 }
+

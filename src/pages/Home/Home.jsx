@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Cards from '../../components//Cards/Cards';
 import './index.scss';
 
+
 const Home = () => {
     
     const [data, setData] = useState([]);

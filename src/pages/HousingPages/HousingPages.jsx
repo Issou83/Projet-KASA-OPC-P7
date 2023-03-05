@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Carousel from '../../components/Carousel/Carousel';
 import Collaps from '../../components/Collaps/Collaps';
-import './index.scss';
+import './housingPages.scss';
 
 const HousingPages = () => {
   const [housing, setHousing] = useState(null);
@@ -36,7 +36,7 @@ const HousingPages = () => {
  
 
   return (
-    <main>
+    <main className='housing'>
       <section key={id}>
         <Carousel images={pictures} key={id} />
         <div className='informations'>
@@ -52,7 +52,7 @@ const HousingPages = () => {
           </div>
         </div>
       </section>
-      <div className='section__collaps'>
+      <div className='sectionCollaps__housing'>
         <Collaps title="Description" content={description}/>
         <Collaps title="Equipement" content={equipments} />
       </div>

@@ -1,9 +1,7 @@
 @import "../../styles/utils/mixins";
 @import "../../styles/utils/variables";
+@import "../../styles/utils/settings";
 
-main {
-    @include marginContainer;
-}
 
 .containerCards {
     padding-top: 31px;
@@ -33,5 +31,3 @@ main {
         }
     }
 }
-
-

@@ -1,10 +1,28 @@
 @import '../../styles/utils/variables';
 
-.collaps {
-    width: 45%;
+
+
+// .sectionCollapsAbout {
+// width: 100%;
+// }
+// .sectionCollapsHousing {
+// width: 45%;
+// }
+.containerCollaps {
+
+   
    display: flex;
    flex-direction: column;
 
+    &__housing {
+        position: relative;
+        width: 45%;
+    }
+
+    &__about {
+        position: relative;
+        width: 100%;
+    }
 
     &__header {
         width: 100%;
@@ -18,11 +36,17 @@
         border-radius: 10px;
     }
 
-    .title {
+    &__title {
         color: white;
     }
 
-    .content {
+    &__content {
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        padding-top: 40px;
+        z-index: -1;
         height: 250px;
         color: $colorTheme;
         background:  $colorTheme2;
