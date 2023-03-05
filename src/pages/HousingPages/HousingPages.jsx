@@ -28,10 +28,11 @@ const HousingPages = () => {
     return <p>Loading...</p>;
   }
 
-  const { id, title, location, tags, description, name, host, pictures, equipements } = housing;
-// const equipementsListe = <ul>equipements.map((equipement) => (  return <li key={equipement}>{equipementsliste}</li> ))<ul/>
+  const { id, title, location, tags, description, name, host, pictures, equipments } = housing;
 
-  console.log(housing);
+// const equipmentsListe = {equipments.map((equipment) => ( <li key={equipment}>{equipmentsliste}</li> ))}
+
+  console.log({equipments});
  
 
   return (
@@ -42,9 +43,7 @@ const HousingPages = () => {
           <div>
             <h1>{title}</h1>
             <p className='location'>{location}</p>
-            {tags.map(tag => (
-              <button key={tag}>{tag}</button>
-            ))}
+            {tags.map(tag => (<button key={tag}>{tag}</button>))}
             <h2>{name}</h2>
           </div>
           <div className='host'>
@@ -52,10 +51,11 @@ const HousingPages = () => {
             <img src={host.picture} alt='' />
           </div>
         </div>
-        <Collaps title="Description" content={description}/>
-        {/* <Collaps title="Equipement" content={<ul>equipements.map((equipement) => (  return <li key={equipement}>{equipementsliste}</li> ))<ul/>}/> */}
-     
       </section>
+      <div className='section__collaps'>
+        <Collaps title="Description" content={description}/>
+        <Collaps title="Equipement" content={equipments} />
+      </div>
     </main>
   );
 };
