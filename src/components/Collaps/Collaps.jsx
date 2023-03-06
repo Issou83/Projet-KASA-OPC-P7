@@ -27,7 +27,7 @@ console.log(locationAbout);
     <div className={locationAbout ? " containerCollaps containerCollaps__about" : " containerCollaps containerCollaps__housing" }>
       <div className="containerCollaps__header" onClick={handleToggle}> {/* Lorsque l'utilisateur clique sur le header (la barre contenant le titre), la fonction "handleToggle" est appelée pour basculer l'état du collaps */}
         <p className="containerCollaps__title">{title}</p> {/* Le titre du collaps */}
-        <span>{open ? <img src={vectorUp} alt="" />  : <img src={vectorDown} alt="" />}</span> {/* La flèche affichée dépend de l'état actuel du collaps. Si le collaps est ouvert (open=true), la flèche pointe vers le bas, sinon elle pointe vers le haut */}
+        <div>{open ? <img src={vectorUp} alt="" />  : <img src={vectorDown} alt="" />}</div> {/* La flèche affichée dépend de l'état actuel du collaps. Si le collaps est ouvert (open=true), la flèche pointe vers le bas, sinon elle pointe vers le haut */}
       </div>
       {open && ( // Si le collaps est ouvert, le contenu est affiché (la classe "collaps-content" est ajoutée), sinon il est masqué
         <div className="containerCollaps__content">

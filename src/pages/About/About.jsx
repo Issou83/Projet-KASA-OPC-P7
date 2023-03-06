@@ -17,12 +17,15 @@ const About = () => {
 
     return (
 
-        <main>
+        <main className='mainAbout'>
            <Banner />
            <div className='sectionCollaps__about'>
+            
             {abouts.map((about) => (
-            <Collaps key={about.id} title={about.title} content={about.content}/> ))}
-
+            <div className='coll'>
+            <Collaps key={about.id} title={about.title} content={about.content}/> 
+            </div>
+            ))}
            </div>        
         </main>
 

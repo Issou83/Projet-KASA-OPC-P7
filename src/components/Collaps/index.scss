@@ -1,26 +1,17 @@
 @import '../../styles/utils/variables';
 
-
-
-// .sectionCollapsAbout {
-// width: 100%;
-// }
-// .sectionCollapsHousing {
-// width: 45%;
-// }
 .containerCollaps {
-
    
    display: flex;
    flex-direction: column;
-
+    border: black solid 2px;
     &__housing {
-        position: relative;
+      
         width: 45%;
     }
 
     &__about {
-        position: relative;
+       
         width: 100%;
     }
 
@@ -41,13 +32,14 @@
     }
 
     &__content {
-        content: "";
-        position: absolute;
+        // content: "";
+        border-radius: 10px;
+        position: relative;
         width: 100%;
-        top: 40px;
+     top: -15px;
         padding-top: 40px;
         z-index: -1;
-        height: 250px;
+        min-height: 250px;
         color: $colorTheme;
         background:  $colorTheme2;
         padding-left: 20px;

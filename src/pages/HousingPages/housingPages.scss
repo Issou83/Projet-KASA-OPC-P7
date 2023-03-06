@@ -10,7 +10,10 @@
         margin-top: 30px;
         h1{
             font-size: 36px;
-
+        }
+        .hostName{
+            width: min-content;
+            margin-right: 10px;
         }
 
         button {
@@ -52,7 +55,7 @@
 
         height: 292px;
     
-
+        // position: relative;
     display: flex;
     flex-direction:row;
     justify-content: space-between;

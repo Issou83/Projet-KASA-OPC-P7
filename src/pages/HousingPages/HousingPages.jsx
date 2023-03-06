@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../../components/Carousel/Carousel';
 import Collaps from '../../components/Collaps/Collaps';
 import './housingPages.scss';
 
 const HousingPages = () => {
-  const [housing, setHousing] = useState(null);
+  const [housing, setHousing] = useState();
   const { id: housingId } = useParams(); // Utilise housingId au lieu de id pour éviter les conflits
+const navigate = useNavigate()
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('/logements.json');
         const data = await response.json();
-        const housingFind = data.find(item => item.id === housingId.toString());
+        const housingFind = data.find(item => item.id === housingId);
         setHousing(housingFind);
+        if (!housingFind) {navigate("/error")}
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-  }, [housingId]);
-
+  }, [housingId, navigate]);
 
 
   if (!housing) {
@@ -47,7 +48,7 @@ const HousingPages = () => {
             <h2>{name}</h2>
           </div>
           <div className='host'>
-            <span>{host.name}</span>
+            <span className='hostName'>{host.name}</span>
             <img src={host.picture} alt='' />
           </div>
         </div>

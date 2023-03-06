@@ -27,6 +27,7 @@ function Carousel({ images }) {
     };
   }, [currentImageIndex, images]);
 
+ 
 
   return (
     <div className='carousel'>
@@ -36,8 +37,8 @@ function Carousel({ images }) {
       </div>
 
       <img className='carousel__img' src={images[currentImageIndex]} alt="imagecarousel" />
+      
       <p className='position'>{currentImageIndex + 1}/{images.length}</p>
-
 
       <div className="carousel__next" >
           <img src={next} alt='suivante' id="next-button" className={ (currentImageIndex +1 === images.length) ? "arrow__next" : "" }/>
