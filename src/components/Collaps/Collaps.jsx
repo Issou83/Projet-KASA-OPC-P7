@@ -7,31 +7,29 @@ import './index.scss';
 
 
 const Collaps = ({title, content}) => {
-  const [open, setOpen] = useState(false); // On crée un état local "open" pour stocker l'état actuel du collaps (ouvert ou fermé), et la fonction "setOpen" pour le mettre à jour
+  const [open, setOpen] = useState(false);
   const [locationAbout, setLocationAbout] = useState(false);
 
   const location = useLocation().pathname;
 
   useEffect(() => {
     if (location === '/about') {setLocationAbout(true)}
+    
 },[location,locationAbout]);
 
-console.log(locationAbout);
-
-
   const handleToggle = () => {
-    setOpen(!open); // On définit une fonction "handleToggle" pour basculer l'état du collaps lorsque l'utilisateur clique sur la flèche
+    setOpen(!open);
   };
 
   return (
     <div className={locationAbout ? " containerCollaps containerCollaps__about" : " containerCollaps containerCollaps__housing" }>
-      <div className="containerCollaps__header" onClick={handleToggle}> {/* Lorsque l'utilisateur clique sur le header (la barre contenant le titre), la fonction "handleToggle" est appelée pour basculer l'état du collaps */}
-        <p className="containerCollaps__title">{title}</p> {/* Le titre du collaps */}
-        <div>{open ? <img src={vectorUp} alt="" />  : <img src={vectorDown} alt="" />}</div> {/* La flèche affichée dépend de l'état actuel du collaps. Si le collaps est ouvert (open=true), la flèche pointe vers le bas, sinon elle pointe vers le haut */}
+      <div className={locationAbout ? " containerCollaps__header containerCollaps__header__housing" : " containerCollaps__header containerCollaps__header__about"} onClick={handleToggle}>
+        <p className={locationAbout ? " containerCollaps__title containerCollaps__title__about" : " containerCollaps__title containerCollaps__title__housing"}>{title}</p>
+        <div>{open ? <img src={vectorUp} alt="" />  : <img src={vectorDown} alt="" />}</div> 
       </div>
-      {open && ( // Si le collaps est ouvert, le contenu est affiché (la classe "collaps-content" est ajoutée), sinon il est masqué
-        <div className="containerCollaps__content">
-          <p className="containerCollaps__body">{content}</p> {/* Le contenu du collaps */}
+      {open && (
+        <div className={locationAbout ? " containerCollaps__content containerCollaps__content__about" : "containerCollaps__content containerCollaps__content__housing" }>
+          <p className="containerCollaps__body">{content}</p>
         </div>
       )}
     </div>

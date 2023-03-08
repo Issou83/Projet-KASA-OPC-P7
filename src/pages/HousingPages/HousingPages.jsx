@@ -3,11 +3,14 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../../components/Carousel/Carousel';
 import Collaps from '../../components/Collaps/Collaps';
 import './housingPages.scss';
+import starOrange from "../../assets/images/StarOrange.png";
+import starGrey from "../../assets/images/StarGrey.png";
 
 const HousingPages = () => {
   const [housing, setHousing] = useState();
-  const { id: housingId } = useParams(); // Utilise housingId au lieu de id pour éviter les conflits
-const navigate = useNavigate()
+  const housingId = useParams().id;
+  const navigate = useNavigate();
+  const ratingArray = [1,2,3,4,5];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,13 +32,8 @@ const navigate = useNavigate()
     return <p>Loading...</p>;
   }
 
-  const { id, title, location, tags, description, name, host, pictures, equipments } = housing;
-
-// const equipmentsListe = {equipments.map((equipment) => ( <li key={equipment}>{equipmentsliste}</li> ))}
-
-  console.log({equipments});
+  const { id, title, location, tags, description, rating, name, host, pictures, equipments } = housing;
  
-
   return (
     <main className='housing'>
       <section key={id}>
@@ -44,19 +42,37 @@ const navigate = useNavigate()
           <div>
             <h1>{title}</h1>
             <p className='location'>{location}</p>
-            {tags.map(tag => (<button key={tag}>{tag}</button>))}
+            {tags.map(tag => (<button key={tag}><p>{tag}</p></button>))}
             <h2>{name}</h2>
           </div>
           <div className='host'>
-            <span className='hostName'>{host.name}</span>
-            <img src={host.picture} alt='' />
+            <div className='host__info'>
+              <span className='host__info__name'>{host.name}</span>
+              <img src={host.picture} alt='' />
+            </div>
+            <div className='host__stars'>
+              {ratingArray
+                  .map((index) => {
+                    const starValue = index + 1;
+                    return (<img 
+                    className='host__stars__star' 
+                    key={index} 
+                    src={starValue <= rating ? starOrange : starGrey} 
+                    alt="Etoiles" />)
+              })} 
+            </div>
           </div>
         </div>
       </section>
-      <div className='sectionCollaps__housing'>
+      <section className='sectionCollaps__housing'>
         <Collaps title="Description" content={description}/>
-        <Collaps title="Equipement" content={equipments} />
-      </div>
+        <Collaps title="Equipement" content = {
+          <ul>
+            {equipments.map((equipment, index) => (
+            <li key={index}>{equipment}</li>))}
+          </ul>}> 
+        </Collaps>
+      </section>
     </main>
   );
 };

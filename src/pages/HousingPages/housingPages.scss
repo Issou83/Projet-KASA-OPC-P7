@@ -3,23 +3,25 @@
 .housing {
     color: $colorTheme;
     font-size: 18px;
-    .informations {
 
+    .informations {
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
-        h1{
+
+        h1 {
             font-size: 36px;
-        }
-        .hostName{
-            width: min-content;
-            margin-right: 10px;
+            font-weight: 500;
+            line-height: 51.34px;
         }
 
+        .location {
+            font-size: 20px;
+            font-size: 500;
+         }
+
         button {
-            border: white solid 1px;
-            color: white;
-            font-size: 14px;
+            border: $colorWh solid 1px;
             background: $colorTheme;
             margin-right: 10px;
             margin-top: 20px;
@@ -29,33 +31,50 @@
             min-width: 115px;
             height: 25px;
             border-radius: 10px;
+
+            p {
+                font-size: 14px;
+                color: $colorWh;
+            } 
         }
     }
 }
 
 .host {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-    .location {
-        font-weight: bolder;
+    &__info {
+        display: flex;
+        align-items: center;
+        height: 65px;
+
+        &__name {
+            width: min-content;
+            margin-right: 10px;
+            text-align: end;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+        }
     }
 
-    span {
-        text-align: end;
-    }
+    &__stars {
+        margin-top: 24px;
 
-    img {
-        border-radius: 50%;
-        width: 64px;
-        height: 64px;
+        &__star {
+            margin-left: 10px;
+            height: 30px;
+        }
     }
 }
 
 .sectionCollaps__housing {
-
-        height: 292px;
-    
-        // position: relative;
+    height: 292px;
     display: flex;
     flex-direction:row;
     justify-content: space-between;

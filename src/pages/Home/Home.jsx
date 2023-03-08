@@ -18,12 +18,14 @@ const Home = () => {
     return (
         <main>
             <Banner />
+            <section>
             <div className='containerCards'>
                 {data
                 .map((housing) => (
                     <Cards housing={housing} key={housing.id}/>
                 ))}
             </div>
+            </section>
         </main>
     );
 };

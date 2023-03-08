@@ -3,13 +3,18 @@
 }
 
 .sectionCollaps__about{
+  
+
     height: auto;
+
     .coll{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+       
         height: auto;
-        border: black solid 2px;
-position: relative;
-margin: 31px 0;
+        // border: black solid 2px;
+        position: relative;
+        margin: 31px 0;
     }
 
 }

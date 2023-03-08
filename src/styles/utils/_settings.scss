@@ -12,7 +12,7 @@ html {
 
 body {
   @include fullSize;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   padding-top: 40px;
   position: relative;
 }
@@ -22,4 +22,8 @@ main {
   position:relative;
   padding-bottom:43px;
   @include marginContainer;
+}
+
+li {
+  list-style-type: none;
 }

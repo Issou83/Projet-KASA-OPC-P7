@@ -6,8 +6,8 @@ const Cards = ({housing}) => {
 
 
     return (
-        <Link to={`/housing/${housing.id}`}>
-            <figure className='cards' >
+        <Link to={`/housing/${housing.id}`} className="card">
+            <figure className='card__content' >
                 <img src={housing.cover} alt={housing.location} ></img>
                 <h2>{housing.title}</h2>
             </figure>
