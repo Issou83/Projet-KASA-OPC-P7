@@ -1,7 +1,5 @@
 @import '../../styles/utils/variables';
 
-
-
 .card {
 
     @media screen and (max-width: 991px) {
@@ -13,6 +11,11 @@
         height: 340px;
         width: 340px;
         display: flex;
+
+        @media screen and (max-width: 991px){
+            height: 335px;
+            width: 100%;    
+        }
 
         &::after {
             content:"";
@@ -35,7 +38,7 @@
 
         h2 {
             z-index: 3;
-            padding: 0 20px 15px 20px;
+            padding: 0 20px 20px 20px;
             width: 100%;
             font-size: 18px;
             font-weight: 500;
@@ -44,11 +47,13 @@
             bottom: 0;
             color: $colorWh;
             transition: all 0.2s ease-in-out;
+
+            @media screen and (max-width:992px) {
+                padding-bottom: 15px;
+            }
         }
 
-        @media screen and (max-width: 991px){
-            width: 100%;    
-        }
+       
     }
 
 }

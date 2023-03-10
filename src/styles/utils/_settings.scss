@@ -15,12 +15,19 @@ body {
   font-family: "Montserrat", sans-serif;
   padding-top: 40px;
   position: relative;
+
+  @media screen and (max-width: 991px) {
+    padding-top: 30px;
+}
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+}
+
 }
 
 main {
   min-height:100%;
   position:relative;
-  padding-bottom:43px;
   @include marginContainer;
 }
 

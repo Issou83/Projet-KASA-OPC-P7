@@ -22,10 +22,11 @@ const About = () => {
            <div className='sectionCollaps__about'>
             
             {abouts.map((about) => (
-            <div key={about.id} className='coll'>
-            <Collaps  title={about.title} content={about.content}/> 
+            <div key={about.id} className='containerCollapse'>
+                <Collaps  title={about.title} content={about.content}/> 
             </div>
             ))}
+
            </div>        
         </main>
 

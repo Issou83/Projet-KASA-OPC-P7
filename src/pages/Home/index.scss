@@ -4,20 +4,34 @@
 
 
 .containerCards {
-    padding-top: 31px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 31px 25px 0 25px;
+    margin-bottom: 43px;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
     background: $colorTheme2;
     border-radius: 25px;
 
+    @media screen and (max-width: 992px) {
+        padding: 0;
+        border-radius: 18px;
+        margin-bottom: 25px;
+    }
+    @media screen and (max-width: 768px) {
+        background: none;
+        border-radius: 10px;
+        margin-bottom: 0px;
+    }
+
     a {
         margin: 25px;
         border-radius: 25px;
         box-shadow: 0px 0px 0px $colorGr;
         transition: all 0.2s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+            margin: 0 0 20px 0;
+        }
 
         &:hover {
             transform: scale(1.05);

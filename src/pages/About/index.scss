@@ -4,17 +4,19 @@
 
 .sectionCollaps__about{
   
-
-    height: auto;
-
-    .coll{
+    .containerCollapse{
         display: flex;
         justify-content: center;
-       
         height: auto;
-        // border: black solid 2px;
         position: relative;
-        margin: 31px 0;
+        margin-bottom: 31px;
+
+        @media screen and (max-width: 991px) {
+            margin-bottom: 26px;
+        }
+        @media screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
 
 }

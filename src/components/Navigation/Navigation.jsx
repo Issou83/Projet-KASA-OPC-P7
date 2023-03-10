@@ -5,7 +5,7 @@ import './index.scss';
 const Navigation = () => {
     return (
         <nav className='nav'>
-            <ul className="navList">
+            <ul className="nav__list">
                 <NavLink to="/"  className={(list) => (list.isActive ? "list__active" : "list")}>
                     <li>Acceuil</li>
                 </NavLink>

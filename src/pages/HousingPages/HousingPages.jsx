@@ -70,8 +70,7 @@ const HousingPages = () => {
           <ul>
             {equipments.map((equipment, index) => (
             <li key={index}>{equipment}</li>))}
-          </ul>}> 
-        </Collaps>
+          </ul>}/> 
       </section>
     </main>
   );
