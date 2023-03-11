@@ -33,16 +33,19 @@ function Carousel({ images }) {
     <div className='carousel'>
 
       <div className="carousel__previous" >
-        <img src={previous} alt='précédente'id="previous-button" className={ (currentImageIndex +1 === 1) ? "arrow__previous__hidden" : "arrow"}/>
+        <img src={previous} alt='précédente'id="previous-button" 
+        className={images.length===1 ? "arrow__previous__hidden" :  "arrow"}/>
       </div>
       
       <img className='carousel__img' src={images[currentImageIndex]} alt="imagecarousel" />
       
       <div className='container'>
-      <p className='container__position'>{currentImageIndex + 1}/{images.length}</p>
+      {images.length===1 ? "" : <p className='container__position'>{currentImageIndex + 1}/{images.length}</p>}
       </div>
+
       <div className="carousel__next" >
-          <img src={next} alt='suivante' id="next-button" className={ (currentImageIndex +1 === images.length) ? "arrow__next__hidden" : "arrow" }/>
+          <img src={next} alt='suivante' id="next-button" 
+          className={images.length===1 ? "arrow__previous__hidden" :  "arrow" }/>
       </div>
       
     </div>

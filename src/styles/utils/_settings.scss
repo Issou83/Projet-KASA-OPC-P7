@@ -7,14 +7,13 @@
 }
 
 html {
-@include fullSize;
+  @include fullSize;
 }
 
 body {
   @include fullSize;
   font-family: "Montserrat", sans-serif;
   padding-top: 40px;
-
 
     @media screen and (max-width: 992px) {
       padding-top: 30px;
@@ -32,8 +31,6 @@ body {
 }
 
 main {
-
-
   @include marginContainer;
 }
 
@@ -42,5 +39,6 @@ li {
 }
 
 a {
+  text-decoration: none;
   color: $colorTheme;
 }
