@@ -94,7 +94,6 @@
     align-items: flex-end;
 
     @media screen and (max-width: 992px) {
-        display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
@@ -177,7 +176,8 @@
 }
 
 .sectionCollaps__housing {
-    height: 292px;
+    margin-bottom: 44.5px;
+    height: 310px;
     display: flex;
     flex-direction:row;
     justify-content: space-between;

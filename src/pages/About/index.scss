@@ -1,5 +1,11 @@
 .mainAbout {
-    padding-bottom: 162px;
+    // padding-bottom: 170px;
+    // @media screen and (max-width: 991px) {
+    //     padding-bottom: 159px;
+    // }
+    // @media screen and (max-width: 768px) {
+    //     padding-bottom: 148px;
+    // }
 }
 
 .sectionCollaps__about{
@@ -9,7 +15,7 @@
         justify-content: center;
         height: auto;
         position: relative;
-        margin-bottom: 31px;
+        margin-bottom: 30px;
 
         @media screen and (max-width: 991px) {
             margin-bottom: 26px;

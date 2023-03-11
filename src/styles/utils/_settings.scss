@@ -14,23 +14,33 @@ body {
   @include fullSize;
   font-family: "Montserrat", sans-serif;
   padding-top: 40px;
-  position: relative;
 
-  @media screen and (max-width: 991px) {
-    padding-top: 30px;
-}
-  @media screen and (max-width: 768px) {
-    padding-top: 20px;
+
+    @media screen and (max-width: 992px) {
+      padding-top: 30px;
+  }
+    @media screen and (max-width: 768px) {
+      padding-top: 20px;
+  }
+
 }
 
+#root {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main {
-  min-height:100%;
-  position:relative;
+
+
   @include marginContainer;
 }
 
 li {
   list-style-type: none;
+}
+
+a {
+  color: $colorTheme;
 }
