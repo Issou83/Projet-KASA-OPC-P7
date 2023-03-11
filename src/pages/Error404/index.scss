@@ -1,23 +1,19 @@
 @import"../../styles/utils/variables";
+@import"../../styles/utils/mixins";
 
 .main404 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centerAll;
     color: $colorTheme;
     margin-top: 146px;
     
 }
 
 .containerError {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centerAll;
     flex-direction: column;
 
     img {
         margin: 35px 0;
-        
         
         @media screen and (max-width: 992px) {
             margin: 26px 0;

@@ -78,6 +78,7 @@
 
     &__position {
         font-size: 25px;
+        font-weight: 500;
         color: $colorWh;
 
         @media screen and (max-width:992px) {
@@ -99,11 +100,7 @@
         width: 20px;
     }
 
-    &__previous__hidden {
-        width: 0;
-    }
-
-    &__next__hidden {
+    &__hidden {
         width: 0;
     }
 }

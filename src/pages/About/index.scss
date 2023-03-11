@@ -1,8 +1,9 @@
+@import "../../styles/utils/mixins";
+
 .sectionCollaps__about{
   
     .containerCollapse{
-        display: flex;
-        justify-content: center;
+        @include centerX;
         height: auto;
         position: relative;
         margin-bottom: 30px;

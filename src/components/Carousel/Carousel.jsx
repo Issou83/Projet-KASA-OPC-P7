@@ -34,7 +34,7 @@ function Carousel({ images }) {
 
       <div className="carousel__previous" >
         <img src={previous} alt='précédente'id="previous-button" 
-        className={images.length===1 ? "arrow__previous__hidden" :  "arrow"}/>
+        className={images.length===1 ? "arrow__hidden" :  "arrow"}/>
       </div>
       
       <img className='carousel__img' src={images[currentImageIndex]} alt="imagecarousel" />
@@ -45,7 +45,7 @@ function Carousel({ images }) {
 
       <div className="carousel__next" >
           <img src={next} alt='suivante' id="next-button" 
-          className={images.length===1 ? "arrow__previous__hidden" :  "arrow" }/>
+          className={images.length===1 ? "arrow__hidden" :  "arrow" }/>
       </div>
       
     </div>
