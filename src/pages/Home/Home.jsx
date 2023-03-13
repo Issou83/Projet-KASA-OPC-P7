@@ -15,8 +15,6 @@ const Home = () => {
       .catch((error) => console(error));
   }, []);
 
-  document.title = "Kasa-Home";
-
   return (
     <>
       <Banner />
@@ -29,7 +27,7 @@ const Home = () => {
       </section>
     </>
   );
-  
+
 };
 
 export default Home;

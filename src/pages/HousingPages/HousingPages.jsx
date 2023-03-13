@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../../components/Carousel/Carousel';
 import Collaps from '../../components/Collaps/Collaps';
-import './housingPages.scss';
+import './index.scss';
 import starOrange from "../../assets/images/StarOrange.png";
 import starGrey from "../../assets/images/StarGrey.png";
 

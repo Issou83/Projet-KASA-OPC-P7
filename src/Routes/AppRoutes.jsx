@@ -5,7 +5,6 @@ import Error404 from "../pages/Error404/Error404";
 import HousingPages from "../pages/HousingPages/HousingPages";
 import { Route, Routes } from "react-router-dom";
 
-
 const AppRoutes = () => {
   return (
     <Routes>
