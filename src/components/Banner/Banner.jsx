@@ -17,7 +17,9 @@ const Banner = () => {
 
     return (
         <div className={locationHome ? 'banner banner__home' :'banner banner__about'}>
-            {locationHome ? <h1 className='banner__title'>Chez vous, partout et ailleurs</h1> : ""}
+            {locationHome ? <h1 className='banner__title'>
+                <span>Chez vous,</span>&nbsp;
+                <span> partout et ailleurs</span></h1> : ""}
         </div>
         );
     };

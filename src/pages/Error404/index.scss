@@ -1,33 +1,32 @@
-@import"../../styles/utils/variables";
-@import"../../styles/utils/mixins";
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
 
 .main404 {
-    @include centerAll;
-    color: $colorTheme;
-    margin-top: 146px;
-    
+  @include centerAll;
+  color: $colorTheme;
+  margin-top: 146px;
 }
 
 .containerError {
-    @include centerAll;
-    flex-direction: column;
+  @include centerAll;
+  flex-direction: column;
 
-    img {
-        margin: 35px 0;
-        
-        @media screen and (max-width: 992px) {
-            margin: 26px 0;
-            line-height: 25.67px;
-        }
-        @media screen and (max-width: 768px) {
-            width: 200px;
-            height: auto;
-            margin: 18px 0;
-            line-height: 25.67px;
-        }
+  img {
+    margin: 35px 0;
+
+    @media screen and (max-width: 992px) {
+      margin: 26px 0;
+      line-height: 25.67px;
     }
-    
-    h1 {
+    @media screen and (max-width: 768px) {
+      width: 200px;
+      height: auto;
+      margin: 18px 0;
+      line-height: 25.67px;
+    }
+  }
+
+  .errorTitle {
     font-size: 36px;
     font-weight: 500;
     line-height: 51px;
@@ -36,33 +35,31 @@
     margin-bottom: 182px;
     text-align: center;
 
-    
     @media screen and (max-width: 992px) {
-        margin-top: 11px;
-        font-size: 26px;
-        margin-bottom: 148px;
-        line-height: 24px;
-
+      margin-top: 11px;
+      font-size: 26px;
+      margin-bottom: 148px;
+      line-height: 24px;
     }
     @media screen and (max-width: 768px) {
-        font-size: 18px;
-        margin-bottom: 133px;
+      font-size: 18px;
+      margin-bottom: 133px;
     }
-    }
+  }
 
-    p {
+  .backToHome {
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
     letter-spacing: 0em;
     margin-bottom: 159px;
 
-        @media screen and (max-width: 992px) {
-            font-size: 16px;
-        }
-        @media screen and (max-width: 768px) {
-            font-size: 14px;
-            margin-bottom: 235px;
-        }
+    @media screen and (max-width: 992px) {
+      font-size: 16px;
     }
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+  }
 }

@@ -2,105 +2,101 @@
 @import "../../styles/utils/mixins";
 
 .carousel {
-    position: relative;
-    width: 100%;
-    height: 415px;
+  position: relative;
+  width: 100%;
+  height: 415px;
+
+  @media screen and (max-width: 992px) {
+    height: 325px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 255px;
+  }
+
+  &__img {
+    object-fit: cover;
+    border-radius: 25px;
+    @include fullSize;
 
     @media screen and (max-width: 992px) {
-        height: 325px;        
+      border-radius: 18px;
     }
     @media screen and (max-width: 768px) {
-        height: 255px;        
+      border-radius: 10px;
     }
-    
-    &__img {
-        
-        object-fit: cover;
-        border-radius: 25px;
-        @include fullSize;
+  }
 
-        @media screen and (max-width:992px) {
-            border-radius: 18px;
-        }
-        @media screen and (max-width:768px) {
-            border-radius: 10px;
-        }
+  &__previous {
+    position: absolute;
+    left: 23px;
+    top: 170px;
+
+    @media screen and (max-width: 992px) {
+      left: 14px;
+      top: 130px;
     }
-
-    &__previous {
-        position: absolute;
-        left: 23px;
-        top: 170px;  
-
-        @media screen and (max-width:992px) {
-            left: 14px;
-            top:  130px;
-        }
-        @media screen and (max-width:768px) {
-            left: 6px;
-            top:  110px;
-        }
+    @media screen and (max-width: 768px) {
+      left: 6px;
+      top: 110px;
     }
+  }
 
-    &__next {
-        position: absolute;
-        right: 23px;
-        top:  170px;
-        @media screen and (max-width:992px) {
-            right: 14px;
-            top:  130px;
-        }
-        @media screen and (max-width:768px) {
-            right: 6px;
-            top:  110px;
-        }
-        
+  &__next {
+    position: absolute;
+    right: 23px;
+    top: 170px;
+    @media screen and (max-width: 992px) {
+      right: 14px;
+      top: 130px;
     }
-
+    @media screen and (max-width: 768px) {
+      right: 6px;
+      top: 110px;
+    }
+  }
 }
 
-
 .container {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
 
-    @media screen and (max-width:992px) {
-        margin-bottom: 20px;    
-    }
-    @media screen and (max-width:768px) {
-        margin-bottom: 10px;    
-    }
+  @media screen and (max-width: 992px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 
-    &__position {
-        font-size: 25px;
-        font-weight: 500;
-        color: $colorWh;
+  &__position {
+    font-size: 25px;
+    font-weight: 500;
+    color: $colorWh;
 
-        @media screen and (max-width:992px) {
-            font-size: 20px;
-        }
-        @media screen and (max-width:768px) {
-            font-size: 14px;
-        }
+    @media screen and (max-width: 992px) {
+      font-size: 20px;
     }
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
 }
 
 .arrow {
-    width: 46px;
+  width: 46px;
 
-    @media screen and (max-width:992px) {
-        width: 34px;
-    }
-    @media screen and (max-width:768px) {
-        width: 20px;
-    }
+  @media screen and (max-width: 992px) {
+    width: 34px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 20px;
+  }
 
-    &__hidden {
-        width: 0;
-    }
+  &__hidden {
+    width: 0;
+  }
 }

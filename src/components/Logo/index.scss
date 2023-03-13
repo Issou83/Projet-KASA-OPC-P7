@@ -1,15 +1,15 @@
 .logo {
-    width: 210px;
-    height: 68px;
-    img {
-        width: 100%;
-    }
+  width: 210px;
+  height: 68px;
+  img {
+    width: 100%;
+  }
 
-    @media screen and (max-width: 991px) {
-        width: 177px;
-    }
+  @media screen and (max-width: 991px) {
+    width: 177px;
+  }
 
-    @media screen and (max-width: 768px) {
-        width: 145px;
-    }
+  @media screen and (max-width: 768px) {
+    width: 145px;
+  }
 }

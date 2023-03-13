@@ -1,37 +1,37 @@
-@import '../../styles/utils/variables';
-@import '../../styles/utils/mixins';
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
 
 footer {
-    @include fullSize;
-    height: $heightFooter;
-    @include centerAll;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    background: $colorBl;
-    font-size: 12px;
+  @include fullSize;
+  height: $heightFooter;
+  @include centerAll;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: $colorBl;
+  font-size: 12px;
 
-    p {
-        color: $colorWh;
-        margin-top: 28px;
-        font-size: 22px;
+  p {
+    color: $colorWh;
+    margin-top: 28px;
+    font-size: 22px;
 
-        @media screen and (max-width: 992px) {
-            font-size: 17px;        
-        }
-        @media screen and (max-width: 768px) {
-            font-size: 12px;        
-        }
+    @media screen and (max-width: 992px) {
+      font-size: 17px;
     }
-
-    img {
-        margin-top: 66px;
-
-        @media screen and (max-width: 992px) {
-            margin-top: 64px;
-        }
-        @media screen and (max-width: 768px) {
-            margin-top: 62px;
-        }
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
     }
+  }
+
+  img {
+    margin-top: 66px;
+
+    @media screen and (max-width: 992px) {
+      margin-top: 64px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 62px;
+    }
+  }
 }

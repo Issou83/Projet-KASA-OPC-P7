@@ -1,22 +1,19 @@
 @import "../../styles/utils/mixins";
 
-.sectionCollaps__about{
-  
-    .containerCollapse{
-        @include centerX;
-        height: auto;
-        position: relative;
-        margin-bottom: 30px;
+.sectionCollaps__about {
+margin-bottom: 200px;
 
-        @media screen and (max-width: 991px) {
-            margin-bottom: 26px;
-        }
-        @media screen and (max-width: 768px) {
-            margin-bottom: 20px;
-        }
+  .containerCollapseAbout {
+    @include centerX;
+    height: auto;
+    position: relative;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 26px;
     }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
 }
-    
-    
-    
- 

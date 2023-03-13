@@ -2,47 +2,46 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/settings";
 
-
 .containerCards {
-    padding: 31px 25px 0 25px;
-    margin-bottom: 43px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background: $colorTheme2;
+  padding: 31px 25px 0 25px;
+  margin-bottom: 43px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: $colorTheme2;
+  border-radius: 25px;
+
+  @media screen and (max-width: 992px) {
+    padding: 0;
+    border-radius: 18px;
+    margin-bottom: 25px;
+  }
+  @media screen and (max-width: 768px) {
+    background: none;
+    border-radius: 10px;
+    margin-bottom: 0px;
+  }
+
+  a {
+    margin: 25px;
     border-radius: 25px;
+    box-shadow: 0px 0px 0px $colorGr;
+    transition: all 0.2s ease-in-out;
 
-    @media screen and (max-width: 992px) {
-        padding: 0;
-        border-radius: 18px;
-        margin-bottom: 25px;
-    }
     @media screen and (max-width: 768px) {
-        background: none;
-        border-radius: 10px;
-        margin-bottom: 0px;
+      margin: 0 0 20px 0;
     }
 
-    a {
-        margin: 25px;
-        border-radius: 25px;
-        box-shadow: 0px 0px 0px $colorGr;
-        transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 10px 10px 10px $colorGr;
 
-        @media screen and (max-width: 768px) {
-            margin: 0 0 20px 0;
-        }
-
-        &:hover {
-            transform: scale(1.05);
-            box-shadow: 10px 10px 10px $colorGr;
-            
-            .cards::after{
-                opacity: 0.5;
-            }
-            .cards>h2 {
-                font-size: 18.5px;
-            }
-        }
+      .cards::after {
+        opacity: 0.5;
+      }
+      .cards > h2 {
+        font-size: 18.5px;
+      }
     }
+  }
 }

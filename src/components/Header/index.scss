@@ -1,8 +1,16 @@
-@import '../../styles/utils/mixins';
+@import "../../styles/utils/mixins";
 
 .header {
-    @include marginContainer;
-    display: flex;
-    justify-content: space-between;
+  @include marginContainer;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 40px;
+  align-items: center;
 
+  @media screen and (max-width: 992px) {
+    margin-block: 30px;
+  }
+  @media screen and (max-width: 762px) {
+    margin-block: 20px;
+  }
 }

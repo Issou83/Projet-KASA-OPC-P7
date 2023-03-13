@@ -5,15 +5,15 @@ import errorPage from "../../assets/images/404.png"
 
 const Error404 = () => {
     return (
-        <main className='main404'>
+        <>
             <div className='containerError'>
                 <img src={errorPage} alt="" />
-                <h1>Oups! La page que vous&nbsp;demandez&nbsp;n'existe&nbsp;pas.</h1>
+                <h1 className='errorTitle'>Oups! La page que vous&nbsp;demandez&nbsp;n'existe&nbsp;pas.</h1>
                 <NavLink to="/">
-                    <p>Retourner sur la page d'accueil</p>
+                    <p className='backToHome'>Retourner sur la page d'accueil</p>
                 </NavLink>
             </div>
-        </main>
+        </>
     );
 };
 

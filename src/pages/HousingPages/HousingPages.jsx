@@ -27,7 +27,6 @@ const HousingPages = () => {
     fetchData();
   }, [housingId, navigate]);
 
-
   if (!housing) {
     return <p>Loading...</p>;
   }
@@ -52,13 +51,13 @@ const HousingPages = () => {
             </div>
             <div className='host__stars'>
               {ratingArray
-                  .map((index) => {
-                    const starValue = index + 1;
-                    return (<img 
-                    className='host__stars__star' 
-                    key={index} 
-                    src={starValue <= rating ? starOrange : starGrey} 
-                    alt="Etoiles" />)
+                .map((index) => {
+                  const starValue = index + 1;
+                  return (<img 
+                  className='host__stars__star' 
+                  key={index} 
+                  src={starValue <= rating ? starOrange : starGrey} 
+                  alt="Etoiles" />)
               })} 
             </div>
           </div>

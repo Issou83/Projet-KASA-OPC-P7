@@ -1,58 +1,54 @@
-@import '../../styles/utils/variables';
-@import '../../styles/utils/mixins';
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
 
 .card {
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    height: 340px;
+    width: 340px;
+    display: flex;
 
     @media screen and (max-width: 991px) {
-        width: 100%;    
+      height: 335px;
+      width: 100%;
     }
 
-        &__content {
-        position: relative;
-        height: 340px;
-        width: 340px;
-        display: flex;
-
-        @media screen and (max-width: 991px){
-            height: 335px;
-            width: 100%;    
-        }
-
-        &::after {
-            content:"";
-            position: absolute;
-            background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.61));
-            @include fullSize;
-            border-radius: 10px;
-            opacity: 1;
-            transition: all 0.2s ease-in-out;
-        }
-
-        img {
-            margin: 0;      
-            @include fullSize;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        h2 {
-            z-index: 3;
-            padding: 0 20px 20px 20px;
-            width: 100%;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 25.67px;
-            position: absolute;
-            bottom: 0;
-            color: $colorWh;
-            transition: all 0.2s ease-in-out;
-
-            @media screen and (max-width:992px) {
-                padding-bottom: 15px;
-            }
-        }
-
-       
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.61));
+      @include fullSize;
+      border-radius: 10px;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
     }
 
+    img {
+      margin: 0;
+      @include fullSize;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h2 {
+      z-index: 3;
+      padding: 0 20px 20px 20px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 25.67px;
+      position: absolute;
+      bottom: 0;
+      color: $colorWh;
+      transition: all 0.2s ease-in-out;
+
+      @media screen and (max-width: 992px) {
+        padding-bottom: 15px;
+      }
+    }
+  }
 }
