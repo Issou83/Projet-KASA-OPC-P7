@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
+//Aprés récupération de la props 'housing' (injécté par 'Home.jsx'), le render nous affiche ses éléments.
 const Cards = ({housing}) => {
 
 

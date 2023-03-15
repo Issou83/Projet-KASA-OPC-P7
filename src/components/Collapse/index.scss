@@ -1,12 +1,13 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/mixins";
 
-.containerCollaps {
+.containerCollapse {
   display: flex;
   flex-direction: column;
 
   &__housing {
-    width: 45%;
+    width: 46.93%;
+    height: auto;
 
     @media screen and (max-width: 992px) {
       width: 100%;
@@ -32,17 +33,17 @@
     padding-right: 20px;
     border-radius: 10px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 992px) {
       border-radius: 7px;
     }
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 768px) {
       border-radius: 5px;
     }
 
     &__housing {
       height: 52px;
 
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: 992px) {
         height: 40px;
       }
 
@@ -53,7 +54,7 @@
 
     &__about {
       height: 47px;
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: 992px) {
         height: 38px;
       }
     }
@@ -66,7 +67,7 @@
       font-size: 24px;
       font-weight: 500;
 
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: 992px) {
         font-size: 18px;
       }
 
@@ -80,7 +81,7 @@
       font-weight: 500;
       line-height: 25.67px;
 
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: 992px) {
         font-size: 16px;
       }
 
@@ -97,7 +98,7 @@
   &__arrow {
     width: 26px;
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 992px) {
       width: 20px;
     }
 
@@ -116,12 +117,17 @@
     background: $colorTheme2;
 
     &__housing {
-      height: 250px;
+      height: 249px;
       font-size: 18px;
       line-height: 143%;
-      padding: 40px 12px 27px 20px;
+      padding: 30px 12px 27px 20px;
 
-      @media screen and (max-width: 991px) {
+      height: 249px;
+
+      @media screen and (max-width: 1104px) {
+        height: 260px;
+      }
+      @media screen and (max-width: 992px) {
         height: auto;
         font-size: 12px;
         padding: 30px 10px 14px 16px;
@@ -140,7 +146,7 @@
       padding: 36px 27px 5px 18px;
       line-height: 34.22px;
 
-      @media screen and (max-width: 991px) {
+      @media screen and (max-width: 992px) {
         padding: 28px 17px 19px 14px;
         font-size: 18px;
         line-height: 26px;

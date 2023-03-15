@@ -13,6 +13,7 @@ html {
 body {
   @include fullSize;
   font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
 }
 
 #root {

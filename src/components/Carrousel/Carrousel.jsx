@@ -3,32 +3,43 @@ import "./index.scss";
 import previous from "../../assets/images/VectorBack.png";
 import next from "../../assets/images/VectorForward.png";
 
-function Carousel({ images }) {
+//'Housing.jsx' étant le parent de 'Carrousel', on y injécte la props 'images' et les afficher dans ce dernier  
+function Carrousel({ images }) {
+  // Déclare une state variable "currentImageIndex" pour stocker l'index de l'image actuelle
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Les clics sur les boutons de navigation gauche et droite nous définiseent l'index courrant de l'image à afficher
   useEffect(() => {
     const handleButtonClick = (event) => {
       const buttonId = event.target.id;
 
+      // Au clique sur le bouton précédent, mise à jour de l'index de l'image actuelle par l'index précédent
       if (buttonId === "previous-button") {
         const newIndex =
           (currentImageIndex + images.length - 1) % images.length;
         setCurrentImageIndex(newIndex);
-      } else if (buttonId === "next-button") {
+      } 
+      //Au clique sur le bouton suivant, mise à jour de l'index de l'image actuelle par l'index suivant
+      else if (buttonId === "next-button") {
         const newIndex = (currentImageIndex + 1) % images.length;
         setCurrentImageIndex(newIndex);
       }
     };
 
+    // On écoute l'événements "click" sur les boutons de navigation
     document.addEventListener("click", handleButtonClick);
+
+    // Suppression de l'écouteur d'événements "click", on évite ainsi les comportements indésirables et les fuites de mémoire
     return () => {
       document.removeEventListener("click", handleButtonClick);
     };
   }, [currentImageIndex, images]);
 
+  
   return (
-    <div className="carousel">
-      <div className="carousel__previous">
+    // Bouton précédent
+    <div className="carrousel">
+      <div className="carrousel__previous">
         <img
           src={previous}
           alt="précédente"
@@ -36,11 +47,13 @@ function Carousel({ images }) {
           className={images.length === 1 ? "arrow__hidden" : "arrow"}/>
       </div>
 
+      {/* Affiche l'image actuelle */}
       <img
-        className="carousel__img"
+        className="carrousel__img"
         src={images[currentImageIndex]}
-        alt="imagecarousel"/>
+        alt="carrousel"/>
 
+      {/* Affiche la position actuelle de l'image dans la liste des images */}
       <div className="container">
         {images.length === 1 ? ("") : 
         (<p className="container__position">
@@ -48,7 +61,8 @@ function Carousel({ images }) {
           </p> )}
       </div>
 
-      <div className="carousel__next">
+      {/* Bouton suivant */}
+      <div className="carrousel__next">
         <img
           src={next}
           alt="suivante"
@@ -59,4 +73,4 @@ function Carousel({ images }) {
   );
 }
 
-export default Carousel;
+export default Carrousel;

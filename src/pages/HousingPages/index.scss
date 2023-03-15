@@ -1,8 +1,6 @@
 @import "../../styles/utils/variables";
 @import "../../styles/utils/mixins";
 
-.housing {
-
   .informations {
     display: flex;
     justify-content: space-between;
@@ -81,7 +79,7 @@
       }
     }
   }
-}
+
 
 .host {
   display: flex;
@@ -168,9 +166,8 @@
   }
 }
 
-.sectionCollaps__housing {
-  margin-bottom: 44.5px;
-  // height: 310px;
+.sectionCollapse__housing {
+  margin-bottom: 14px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

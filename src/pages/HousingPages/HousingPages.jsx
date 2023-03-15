@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import Carousel from '../../components/Carousel/Carousel';
-import Collaps from '../../components/Collaps/Collaps';
-import './index.scss';
-import starOrange from "../../assets/images/StarOrange.png";
+import React, { useState, useEffect } from 'react'; 
+import { useParams, useNavigate } from 'react-router-dom'; 
+import Carrousel from '../../components/Carrousel/Carrousel';
+import Collapse from '../../components/Collapse/Collapse'; 
+import './index.scss'; 
+import starOrange from "../../assets/images/StarOrange.png"; 
 import starGrey from "../../assets/images/StarGrey.png";
 
 const HousingPages = () => {
-  const [housing, setHousing] = useState();
-  const housingId = useParams().id;
-  const navigate = useNavigate();
-  const ratingArray = [1,2,3,4,5];
+  const [housing, setHousing] = useState(); // Déclaration d'un état pour le logement et de la méthode pour le modifier
+  const housingId = useParams().id; // On écupére de l'ID du logement dans l'URL avec la méthode useParams
+  const navigate = useNavigate(); // On stock la méthode navigate de react-router-dom pour la redirection
+  const ratingArray = [1,2,3,4,5]; // On déinit un tableau pour les étoiles de notation
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/logements.json');
-        const data = await response.json();
-        const housingFind = data.find(item => item.id === housingId);
-        setHousing(housingFind);
-        if (!housingFind) {navigate("/error")}
+        const response = await fetch('/logements.json'); // Récupération des données du fichier JSON
+        const data = await response.json(); // Conversion des données en objet JSON
+        const housingFind = data.find(item => item.id === housingId); // Récupération du logement correspondant à l'ID dans data
+        setHousing(housingFind); // On change l'état housing avec les données du logement
+        if (!housingFind) {navigate("/error")} // Redirection vers la page 404 si le logement n'existe pas
       } catch (error) {
         console.log(error);
       }
@@ -27,16 +27,17 @@ const HousingPages = () => {
     fetchData();
   }, [housingId, navigate]);
 
-  if (!housing) {
-    return <p>Loading...</p>;
+  if (!housing) { // Affichage d'un message de chargement si le logement n'est pas encore récupéré
+    return <p>Chargement en cours...</p>;
   }
 
+  // Récupération des données du logement (par destructuration)
   const { id, title, location, tags, description, rating, name, host, pictures, equipments } = housing;
- 
+
   return (
-    <main className='housing'>
+    <>
       <section key={id}>
-        <Carousel images={pictures} key={id} />
+        <Carrousel images={pictures} key={id} />
         <div className='informations'>
           <div>
             <h1>{title}</h1>
@@ -47,7 +48,7 @@ const HousingPages = () => {
           <div className='host'>
             <div className='host__info'>
               <span className='host__info__name'>{host.name}</span>
-              <img src={host.picture} alt='' />
+              <img src={host.picture} alt='hôte' />
             </div>
             <div className='host__stars'>
               {ratingArray
@@ -63,15 +64,15 @@ const HousingPages = () => {
           </div>
         </div>
       </section>
-      <section className='sectionCollaps__housing'>
-        <Collaps title="Description" content={description}/>
-        <Collaps title="Equipement" content = {
+      <section className='sectionCollapse__housing'>
+        <Collapse title="Description" content={description}/>
+        <Collapse title="Equipement" content = {
           <ul>
             {equipments.map((equipment, index) => (
             <li key={index}>{equipment}</li>))}
           </ul>}/> 
       </section>
-    </main>
+    </>
   );
 };
 

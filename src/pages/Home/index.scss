@@ -1,9 +1,9 @@
 @import "../../styles/utils/mixins";
 @import "../../styles/utils/variables";
-@import "../../styles/utils/settings";
+// @import "../../styles/utils/settings";
 
 .containerCards {
-  padding: 31px 25px 0 25px;
+  padding: 31px 25px 31px 25px;
   margin-bottom: 43px;
   display: flex;
   flex-wrap: wrap;

@@ -3,6 +3,7 @@ import logoFooter from '../../assets/images/LOGO_Footer.png'
 import './index.scss';
 
 const Footer = () => {
+
     return (
         <footer>
             <img src={logoFooter} className="logoFooter" alt="logo" />

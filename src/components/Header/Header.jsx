@@ -4,9 +4,10 @@ import Navigation from '../Navigation/Navigation';
 import "./index.scss";
 
 const Header = () => {
+    // Le composant retourne un élément d'en-tête qui contient le logo et la navigation.
     return (
         <header className='header'>
-            <Logo />
+            <Logo /> 
             <Navigation />
         </header>
     );
