@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import arrowUp from "../../assets/images/VectorUp.png";
 import arrowDown from "../../assets/images/VectorDown.png";
-import { useLocation } from "react-router-dom";
 import "./index.scss";
 
 const Collapse = ({ title, content }) => {

@@ -7,9 +7,9 @@ import starOrange from "../../assets/images/StarOrange.png";
 import starGrey from "../../assets/images/StarGrey.png";
 
 const HousingPages = () => {
-  const [housing, setHousing] = useState(); // Déclaration d'un état pour le logement et de la méthode pour le modifier
+  const [housing, setHousing] = useState(); // Déclaration de l'état pour le logement et de la méthode pour le modifier
   const housingId = useParams().id; // On écupére de l'ID du logement dans l'URL avec la méthode useParams
-  const navigate = useNavigate(); // On stock la méthode navigate de react-router-dom pour la redirection
+  const navigate = useNavigate(); // On stock la méthode navigate
   const ratingArray = [1,2,3,4,5]; // On déinit un tableau pour les étoiles de notation
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const HousingPages = () => {
     return <p>Chargement en cours...</p>;
   }
 
-  // Récupération des données du logement (par destructuration)
+  // Récupération des données du logement (par déstructuration)
   const { id, title, location, tags, description, rating, name, host, pictures, equipments } = housing;
 
   return (

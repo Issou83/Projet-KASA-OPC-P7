@@ -2,14 +2,12 @@
 
 .nav {
     width: 250px;
-    // margin-bottom: 63px;
     font-size: 24px;
     font-weight: 500;
 
     @media screen and (max-width: 991px) {
         width: 200px;
         font-weight: 500;
-        // margin-bottom: 30px;
     }
 
     @media screen and (max-width: 768px) {
@@ -19,20 +17,20 @@
  
 
     &__list{
-        // margin-top: 10px;
+        margin-bottom: 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        @media screen and (max-width: 991px) {
-            // margin-top: 19px;
-        }
+        // @media screen and (max-width: 991px) {
+        //     // margin-top: 19px;
+        // }
 
         @media screen and (max-width: 320px) {
             display: flex;
             flex-direction: column;
             height: 40px;
-            width: 180px;
+           
          }
     }
 }
