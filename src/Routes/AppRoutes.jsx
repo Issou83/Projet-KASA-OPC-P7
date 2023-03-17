@@ -6,7 +6,7 @@ import Error404 from "../pages/Error404/Error404";
 import HousingPages from "../pages/HousingPages/HousingPages";
 
 /**
- * Composant AppRoutes : définit les routes de l'application
+ * Définition les routes de l'application
  */
 const AppRoutes = () => {
   return (

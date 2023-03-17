@@ -11,7 +11,7 @@ const App = () => {
       
       {/* Conteneur principal pour le contenu de l'application */}
       <main className="mainContainer">
-        {/* Inclure les routes de l'application */}
+        {/* Les routes de l'application */}
         <AppRoutes />
       </main>
       
