@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import './index.scss';
 
 const Banner = () => {
-
     // On initialiser le state pour stocker le path de la page
     const [locationHome, setLocationHome] = useState(false);
 

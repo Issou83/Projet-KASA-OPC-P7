@@ -36,7 +36,7 @@ const HousingPages = () => {
 
   return (
     <>
-      <section key={id}>
+      <section>
         <Carrousel images={pictures} key={id} />
         <div className='informations'>
           <div>
@@ -53,7 +53,7 @@ const HousingPages = () => {
             <div className='host__stars'>
               {ratingArray
                 .map((index) => {
-                  const starValue = index + 1;
+                  const starValue = index;
                   return (<img 
                   className='host__stars__star' 
                   key={index} 
